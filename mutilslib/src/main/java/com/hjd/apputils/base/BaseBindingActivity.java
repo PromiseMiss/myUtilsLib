@@ -10,18 +10,17 @@ import android.os.IBinder;
 import android.os.PersistableBundle;
 import android.os.StrictMode;
 import android.os.SystemClock;
+import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
+import android.support.v4.app.FragmentActivity;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.WindowManager;
 import android.view.inputmethod.InputMethodManager;
+import android.viewbinding.ViewBinding;
 import android.widget.EditText;
-
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.fragment.app.FragmentActivity;
-import androidx.viewbinding.ViewBinding;
 
 import com.hjd.apputils.custom.LoadingDialog;
 import com.hjd.apputils.utils.AppManager;

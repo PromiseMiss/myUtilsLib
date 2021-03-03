@@ -5,13 +5,13 @@ import android.annotation.TargetApi;
 import android.app.Activity;
 import android.graphics.Color;
 import android.os.Build;
+import android.support.annotation.IntDef;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
 
 
-import androidx.annotation.IntDef;
 
 import com.hjd.apputils.app.MyLib;
 

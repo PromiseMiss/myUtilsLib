@@ -1,8 +1,7 @@
 package com.hjd.apputils.custom;
 
+import android.support.v7.widget.RecyclerView;
 import android.view.View;
-
-import androidx.recyclerview.widget.RecyclerView;
 
 /**
  * Created by HJD on 2019/12/20 and 10:26.

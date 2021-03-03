@@ -11,7 +11,6 @@ import com.hjd.m_utilslib.databinding.ActivityMainBinding;
 import com.orhanobut.logger.Logger;
 
 import java.io.IOException;
-import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;

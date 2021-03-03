@@ -1,12 +1,11 @@
 package com.hjd.apputils.custom;
 
+import android.app.AlertDialog;
 import android.content.Context;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.view.View;
-
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AlertDialog;
 
 import com.hjd.apputils.R;
 import com.wang.avi.AVLoadingIndicatorView;

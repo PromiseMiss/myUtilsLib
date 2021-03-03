@@ -1,7 +1,7 @@
 package com.hjd.apputils.utils;
 
 
-import androidx.core.content.FileProvider;
+import android.support.v4.content.FileProvider;
 
 /**
  * Created by HJD on 2018/7/21 0021 and 12:19.

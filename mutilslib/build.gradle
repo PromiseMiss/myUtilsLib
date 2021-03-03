@@ -10,7 +10,6 @@ android {
         versionCode 1
         versionName "1.0"
 
-        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles "consumer-rules.pro"
     }
 
@@ -32,11 +31,8 @@ android {
 
 dependencies {
     api fileTree(dir: "libs", include: ["*.jar"])
-    api 'androidx.appcompat:appcompat:1.2.0'
-    api 'androidx.recyclerview:recyclerview:1.1.0'
-    testApi 'junit:junit:4.12'
-    androidTestApi 'androidx.test.ext:junit:1.1.2'
-    androidTestApi 'androidx.test.espresso:espresso-core:3.3.0'
+    implementation 'com.android.support:support-annotations:28.0.0'
+    implementation 'com.android.support.constraint:constraint-layout:2.0.4'
 
     /*加载dialog*/
     api 'com.wang.avi:library:2.1.3'
@@ -56,7 +52,7 @@ dependencies {
     api 'com.lzy.net:okgo:3.0.4'
     api 'com.lzy.net:okserver:2.0.1'
     //腾讯的本地存储库,
-    api 'com.tencent:mmkv:1.0.22'
+    api 'com.tencent:mmkv:1.0.19'
     //Retrofit2网络
     api 'com.squareup.retrofit2:retrofit:2.9.0'
     api 'com.squareup.retrofit2:converter-gson:2.2.0'
