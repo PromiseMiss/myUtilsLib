@@ -1,6 +1,7 @@
 package com.hjd.m_utilslib;
 
 
+import android.support.v4.app.FragmentTransaction;
 import android.view.View;
 
 import com.bumptech.glide.Glide;
@@ -25,6 +26,9 @@ import static java.lang.annotation.ElementType.*;
 
 
 public class MainActivity extends BaseBindingActivity<ActivityMainBinding> {
+
+    OneFragment oneFragment;
+    TwoFragment twoFragment;
 
 
     @Override
@@ -59,6 +63,52 @@ public class MainActivity extends BaseBindingActivity<ActivityMainBinding> {
                 });
             }
         });
+
+        binding.one.setOnClickListener(v -> {
+            initTab(0);
+        });
+        binding.two.setOnClickListener(v -> {
+            initTab(1);
+        });
+    }
+
+
+    private void initTab(int i) {
+        //开启事务，fragment的控制是由事务来实现的
+        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+        hideFragments(transaction);
+        switch (i) {
+            case 0:
+                if (oneFragment == null) {
+                    oneFragment = new OneFragment();
+                    transaction.add(R.id.ll_fragment, oneFragment);
+                } else {
+                    transaction.show(oneFragment);
+                }
+                break;
+            case 1:
+                if (twoFragment == null) {
+                    twoFragment = new TwoFragment();
+                    transaction.add(R.id.ll_fragment, twoFragment);
+                } else {
+                    transaction.show(twoFragment);
+                }
+                break;
+
+        }
+        transaction.commitAllowingStateLoss();
+
+    }
+
+    private void hideFragments(FragmentTransaction transaction) {
+        if (oneFragment != null) {
+            transaction.hide(oneFragment);
+        }
+        if (twoFragment != null) {
+            transaction.hide(twoFragment);
+        }
+
+
     }
 
     @Override

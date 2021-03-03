@@ -78,10 +78,9 @@ public abstract class BaseBindingFragment<T extends ViewBinding> extends Fragmen
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
         Type superClass = getClass().getGenericSuperclass();
-        Class<?> aClass = (Class<?>) ((ParameterizedType) superClass).getActualTypeArguments()[0];
-        Class[] parameterTypes;
+        Class<T> aClass = (Class<T>) ((ParameterizedType) superClass).getActualTypeArguments()[0];
         try {
-            Method method = aClass.getDeclaredMethod("inflate", LayoutInflater.class);
+            Method method = aClass.getDeclaredMethod("inflate", LayoutInflater.class, ViewGroup.class, boolean.class);
             binding = (T) method.invoke(null, getLayoutInflater(), container, false);
         } catch (NoSuchMethodException | IllegalAccessException | InvocationTargetException e) {
             e.printStackTrace();
